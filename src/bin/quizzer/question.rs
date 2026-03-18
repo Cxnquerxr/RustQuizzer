@@ -2,7 +2,7 @@
 
 struct Question {
     prompt: String,
-    options: vec<String>,
+    options: Vec<String>,
     correct_index: usize,
 }
 
