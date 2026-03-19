@@ -1,6 +1,5 @@
 mod question;
 mod storage;
-mod quiz;
 
 use anyhow::{Result, bail};
 use clap::{Parser, Subcommand};
