@@ -1,13 +1,15 @@
+use serde::{Serialize, Deserialize};
+
 #[derive(Serialize, Deserialize)]
 
-struct Question {
-    prompt: String,
-    options: Vec<String>,
-    correct_index: usize,
+pub struct Question {
+    pub prompt: String,
+    pub options: Vec<String>,
+    pub correct_index: usize,
 }
 
 impl Question {
-    fn validate(&self) -> anyhow::Result<()> {
+    pub fn validate(&self) -> anyhow::Result<()> {
         if self.options.len() != 4 {
             anyhow::bail!("Question must have 4 options");
         }
